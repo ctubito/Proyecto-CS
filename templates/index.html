@@ -1,17 +1,46 @@
 {% extends "layout.html" %}
 
 {% block content %}
+
 <section class="hero-large">
     <h1>Penguin Species Classifier</h1>
     <p>My CS50 final project using machine learning.</p>
 </section>
-<div class="page-grid">
-    <section class="card">
+
+<div class="page-grid home-grid">
+
+    <section class="card about-card">
         <h2>About This Project</h2>
+
         <p>
             This project is a web application that classifies penguin species
             based on their physical measurements. It uses a machine learning model
             trained on the Palmer Archipelago penguin dataset.
         </p>
+
+        <p>
+            The application also includes an unsupervised learning visualization
+            using KMeans clustering to show how penguins can be grouped based on
+            their physical characteristics.
+        </p>
+    </section>
+
+    <section class="card cluster-card">
+        <h2>KMeans Clustering</h2>
+
+        <p>
+            This plot shows how KMeans groups penguins based on their physical
+            measurements. The colors represent the clusters found by the algorithm,
+            while the marker shapes represent the real species labels.
+        </p>
+
+        <img
+            src="{{ url_for('static', filename='images/species_clusters.png') }}"
+            alt="KMeans clustering plot of penguin measurements"
+            class="cluster-image"
+        >
+    </section>
+
+</div>
 
 {% endblock %}

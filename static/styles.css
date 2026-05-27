@@ -9,6 +9,8 @@ body {
     color: #172033;
 }
 
+/* Navbar */
+
 .navbar {
     background: #172033;
     color: white;
@@ -16,7 +18,7 @@ body {
 }
 
 .nav-container {
-    max-width: 1100px;
+    max-width: 1300px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -36,28 +38,12 @@ body {
     margin-left: 1rem;
 }
 
+/* Main layout */
+
 .main-container {
-    max-width: 1100px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 2rem;
-}
-
-.hero-small {
-    background: white;
-    border-radius: 18px;
-    padding: 2rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 10px 25px rgba(23, 32, 51, 0.08);
-}
-
-.hero-small h1 {
-    margin-top: 0;
-    font-size: 2rem;
-}
-
-.hero-small p {
-    color: #5f6b7a;
-    font-size: 1.05rem;
 }
 
 .page-grid {
@@ -66,6 +52,37 @@ body {
     gap: 2rem;
 }
 
+/* Home page layout */
+
+.home-grid {
+    grid-template-columns: 0.75fr 1.75fr;
+    align-items: start;
+}
+
+/* Hero sections */
+
+.hero-small,
+.hero-large {
+    background: white;
+    border-radius: 18px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 25px rgba(23, 32, 51, 0.08);
+}
+
+.hero-small h1,
+.hero-large h1 {
+    margin-top: 0;
+    font-size: 2rem;
+}
+
+.hero-small p,
+.hero-large p {
+    color: #5f6b7a;
+    font-size: 1.05rem;
+}
+
+/* Cards */
 
 .card {
     background: white;
@@ -77,6 +94,15 @@ body {
 .card h2 {
     margin-top: 0;
 }
+
+.about-card p,
+.cluster-card p,
+.confidence-text {
+    color: #5f6b7a;
+    line-height: 1.6;
+}
+
+/* Forms */
 
 .form {
     display: flex;
@@ -113,6 +139,8 @@ body {
     background: #1d4ed8;
 }
 
+/* Prediction result */
+
 .result-card {
     display: flex;
     flex-direction: column;
@@ -134,10 +162,7 @@ body {
     margin-bottom: 0.5rem;
 }
 
-.confidence-text {
-    color: #5f6b7a;
-    line-height: 1.5;
-}
+/* Probabilities */
 
 .probability-section {
     margin-top: 1.5rem;
@@ -169,6 +194,8 @@ body {
     border-radius: 999px;
 }
 
+/* Summary */
+
 .summary-box {
     margin-top: 1.5rem;
     padding: 1rem;
@@ -181,6 +208,8 @@ body {
     line-height: 1.8;
 }
 
+/* Empty state */
+
 .empty-state {
     padding: 2rem;
     text-align: center;
@@ -191,8 +220,42 @@ body {
     color: #172033;
 }
 
-@media (max-width: 800px) {
-    .page-grid {
+/* Error box */
+
+.error-box {
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+}
+
+/* Clustering image */
+
+.cluster-card {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.home-grid .cluster-card {
+    margin-top: 0;
+}
+
+.cluster-image {
+    width: 100%;
+    max-width: none;
+    display: block;
+    margin-top: 1.5rem;
+    border-radius: 14px;
+    border: 1px solid #e5eaf2;
+}
+
+/* Responsive design */
+
+@media (max-width: 900px) {
+    .page-grid,
+    .home-grid {
         grid-template-columns: 1fr;
     }
 
@@ -201,25 +264,22 @@ body {
     }
 
     .hero-small,
+    .hero-large,
     .card {
         padding: 1.5rem;
     }
-}
 
-.cluster-card {
-    margin-top: 2rem;
-}
+    .navbar {
+        padding: 1rem;
+    }
 
-.cluster-card p {
-    color: #5f6b7a;
-    line-height: 1.6;
-}
+    .nav-container {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
 
-.cluster-image {
-    width: 100%;
-    max-width: 900px;
-    display: block;
-    margin: 1.5rem auto 0;
-    border-radius: 14px;
-    border: 1px solid #e5eaf2;
+    .nav-links a {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
 }
