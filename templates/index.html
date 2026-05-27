@@ -1,10 +1,17 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Penguin Classifier</title>
-</head>
-<body>
+{% extends "layout.html" %}
+
+{% block content %}
+<section class="hero-large">
     <h1>Penguin Species Classifier</h1>
     <p>My CS50 final project using machine learning.</p>
-</body>
-</html>
+</section>
+<div class="page-grid">
+    <section class="card">
+        <h2>About This Project</h2>
+        <p>
+            This project is a web application that classifies penguin species
+            based on their physical measurements. It uses a machine learning model
+            trained on the Palmer Archipelago penguin dataset.
+        </p>
+
+{% endblock %}

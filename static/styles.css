@@ -205,3 +205,21 @@ body {
         padding: 1.5rem;
     }
 }
+
+.cluster-card {
+    margin-top: 2rem;
+}
+
+.cluster-card p {
+    color: #5f6b7a;
+    line-height: 1.6;
+}
+
+.cluster-image {
+    width: 100%;
+    max-width: 900px;
+    display: block;
+    margin: 1.5rem auto 0;
+    border-radius: 14px;
+    border: 1px solid #e5eaf2;
+}
